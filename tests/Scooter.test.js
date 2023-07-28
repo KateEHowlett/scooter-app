@@ -1,13 +1,17 @@
 const Scooter = require('../src/Scooter')
 const User = require('../src/User')
 
-//typeof scooter === object
-describe('scooter object', () => {
-  test('does something', () => {
-    // edit this to be a real test!
-    expect(false).toEqual(true);
-  }
-)
+const scooter1 = new Scooter("Norwich");
+
+
+describe("Is a scooter",()=>{
+    it("Has a station",()=>{
+        expect(scooter1.station).toBe("Norwich");
+    })
+
+    it("is a scooter object",()=>{
+      expect(typeof scooter1).toBe(Object);
+    })
 })
 
 //Method tests
