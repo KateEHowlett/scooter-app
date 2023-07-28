@@ -8,8 +8,8 @@ const app1 = new ScooterApp;
 // register user
 describe("how to register a user",()=>{
     it("allows new users",()=>{
-        expect(()=>{
-            app1.registerUser("kilobyte","megabyte",26)}).toThrow();
+        app1.registerUser("kilobyte","megabyte",26);
+        expect(app1.registeredUsers.hasOwnValue("kilobyte")).toBe(true);
     })
     it("doesn't allow under 18",()=>{
         expect(()=>{
